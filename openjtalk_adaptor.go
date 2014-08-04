@@ -1,26 +1,26 @@
 package openjtalk
 
 import (
-  "github.com/hybridgroup/gobot"
+	"github.com/hybridgroup/gobot"
 )
 
 type OpenjtalkAdaptor struct {
-  gobot.Adaptor
+	gobot.Adaptor
 }
 
 func NewOpenjtalkAdaptor(name string) *OpenjtalkAdaptor {
-  return &OpenjtalkAdaptor{
-    Adaptor: *gobot.NewAdaptor(
-      name,
-      "openjtalk.OpenjtalkAdaptor",
-    ),
-  }
+	return &OpenjtalkAdaptor{
+		Adaptor: *gobot.NewAdaptor(
+			name,
+			"openjtalk.OpenjtalkAdaptor",
+		),
+	}
 }
 
 func (o *OpenjtalkAdaptor) Connect() bool {
-  return true
+	return true
 }
 
 func (o *OpenjtalkAdaptor) Finalize() bool {
-  return true
+	return true
 }
